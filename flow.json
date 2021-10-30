@@ -1,0 +1,54 @@
+{
+  "emulators": {
+    "default": {
+      "port": 3569,
+      "serviceAccount": "emulator-account"
+    }
+  },
+  "devWallet": {
+    "accessNode": {
+      "endpoint": "http://localhost:8080"
+    },
+    "port": 8701
+  },
+  "contracts": {
+    "Messenger": "./contracts/Messenger.cdc",
+    "AwesomeNifty": "./contracts/AwesomeNifty.cdc"
+  },
+  "networks": {
+    "emulator": "127.0.0.1:3569",
+    "mainnet": "access.mainnet.nodes.onflow.org:9000",
+    "testnet": "access.devnet.nodes.onflow.org:9000"
+  },
+  "accounts": {
+    "emulator-account": {
+      "address": "f8d6e0586b0a20c7",
+      "key": "04e19315a53c8cbd8eccefd64eb5bd6e11adaaa02f56acc9b825a1c67730f905"
+    },
+    "NinhTQ": {
+      "address": "01cf0e2f2f715450",
+      "key": {
+        "type": "hex",
+        "index": 0,
+        "signatureAlgorithm": "ECDSA_secp256k1",
+        "hashAlgorithm": "SHA3_256",
+        "privateKey": "3bdb4bce953f1733ffb63682ad133de20d4759cae46267d8a12d01993a6607cf"
+      }
+    },
+    "Boo": {
+      "address": "179b6b1cb6755e31",
+      "key": {
+        "type": "hex",
+        "index": 0,
+        "signatureAlgorithm": "ECDSA_secp256k1",
+        "hashAlgorithm": "SHA3_256",
+        "privateKey": "c140f8b7abfb206cd43136559896aca13b4a9aa1f827eda4e8a28d3b32cbc046"
+      }
+    }
+  },
+  "deployments": {
+    "emulator": {
+      "NinhTQ": ["Messenger", "AwesomeNifty"]
+    }
+  }
+}
